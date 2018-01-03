@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap4-starter",
+  "version": "1.0.0",
+  "description": "bootstrap4 starter project",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Cliff",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
