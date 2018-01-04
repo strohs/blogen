@@ -1,7 +1,7 @@
 Blogen
 ====================================================================================================================
-A multi-page admin UI for a fictional Blog site: "Blogen". This is the front-end only. The site is not attached to a
- real back-end.
+A multi-page admin UI for a fictional message board website named: "Blogen".
+This is the front-end only. The site is not attached to a real back-end.
 
 ## Development Info
 This site is part of my coursework for [Bootstrap 4 from Scratch](https://www.udemy.com) taught by
