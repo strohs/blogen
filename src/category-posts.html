@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogen Categories</title>
+    <title>Blogen Category</title>
 
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -27,10 +27,10 @@
                     <a href="index.html" class="nav-link">Dashboard</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a href="posts.html" class="nav-link">Posts</a>
+                    <a href="posts.html" class="nav-link active">Posts</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a href="categories.html" class="nav-link active">Categories</a>
+                    <a href="categories.html" class="nav-link">Categories</a>
                 </li>
                 <li class="nav-item px-2">
                     <a href="users.html" class="nav-link">Users</a>
@@ -66,27 +66,37 @@
 </nav>
 
 <!-- DASHBOARD HEADER -->
-<header id="main-header" class="py-2 bg-success text-white">
+<header id="main-header" class="py-2 bg-secondary text-white">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1><i class="fa fa-folder"></i>Categories</h1>
+                <h1><i class="fa fa-folder"></i>Category Name</h1>
             </div>
         </div>
     </div>
 </header>
 
-<!-- SEARCH CATEGORIES -->
-<section id="search-categories" class="py-4 mb-4 bg-light">
+<!-- BACK and SEARCH -->
+<section id="search-posts" class="py-4 mb-4 bg-light">
     <div class="container">
-        <form id="searchCategoriesForm">
-            <div class="form-row">
-                <div class="form-inline ml-auto">
-                    <input type="text" class="form-control" placeholder="Search"/>
-                    <button type="submit" class="btn btn-success">Search</button>
-                </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="posts.html" class="btn btn-outline-primary">
+                    <i class="fa fa-arrow-left"></i>Back to Posts
+                </a>
             </div>
-        </form>
+            <div class="col-md-6">
+                <form id="searchPostsForm">
+                    <div class="form-row">
+                        <div class="form-inline ml-auto">
+                            <input type="text" class="form-control" placeholder="Search"/>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
     <!-- below is the original (non-form based) search input and button -->
     <!--<div class="container">-->
@@ -110,37 +120,80 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Latest Categories</h4>
+                        <h4>Latest Category Posts</h4>
                     </div>
                     <table class="table table-striped">
                         <thead class="thead-inverse">
                         <tr>
                             <th>#</th>
-                            <th>Category Name</th>
-                            <th>Date Created</th>
+                            <th>User</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date Posted</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td scope="row">1</td>
+                            <td>
+                                <div class="col">
+                                    <h6>jjd</h6>
+                                    <img class="img-fluid img-thumbnail" src="img/avatar.png" height="50" width="50">
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" data-toggle="collapse" data-target="#post-text-1">
+                                    What is the best way to position block elements...
+                                </a>
+                                <div class="collapse" id="post-text-1">
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eius
+                                        libero quisquam nobis explicabo vel non necessitatibus ipsum doloribus
+                                        cupiditate voluptate recusandae quo autem error debitis, sed, minima
+                                        repellendus commodi.
+                                    </p>
+
+                                </div>
+                            </td>
                             <td>Web Development</td>
                             <td>July 12, 2017</td>
+                            <td>
+                                <!--<a href="details.html" class="btn btn-secondary">-->
+                                    <!--<i class="fa fa-angle-double-right">Details</i>-->
+                                <!--</a>-->
+                            </td>
                         </tr>
+
                         <tr>
-                            <td scope="row">2</td>
-                            <td>Tech Gadgets</td>
-                            <td>July 13, 2017</td>
+                            <td scope="row">3</td>
+                            <td>
+                                <div class="col">
+                                    <h6>guster</h6>
+                                    <img class="img-fluid img-thumbnail" src="img/avatar2.jpg" height="50" width="50">
+                                </div>
+                            </td>
+                            <td>I need a web framework recommendation for building a product site</td>
+                            <td>Web Development</td>
+                            <td>July 14, 2017</td>
+                            <td></td>
                         </tr>
+
                         <tr>
-                            <td scope="row">4</td>
-                            <td>Business</td>
-                            <td>July 15, 2017</td>
+                            <td scope="row">5</td>
+                            <td>
+                                <div class="col">
+                                    <h6>sassFan</h6>
+                                    <img class="img-fluid img-thumbnail" src="img/avatar4.jpg" height="50" width="50">
+                                </div>
+                            </td>
+                            <td>Can anyone recommend an IDE for Python and Java development</td>
+                            <td>Web Development</td>
+                            <td>July 16, 2017</td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            <td scope="row">6</td>
-                            <td>Heath & Wellness</td>
-                            <td>July 13, 2017</td>
-                        </tr>
+
                         </tbody>
                     </table>
 
@@ -189,10 +242,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!-- Using ckeditor for WYSIWYG editing in our textarea(s) -->
-<!--<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>-->
-<!--<script>-->
-    <!--CKEDITOR.replace('editor1');-->
-<!--</script>-->
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 Blogen
 ====================================================================================================================
-A multi-page admin UI for a fictional message board website named: "Blogen".
+A multi-page admin UI for a fictional blogging website named: "Blogen".
 This is the front-end only. The site is not attached to a real back-end.
 
 ## Development Info

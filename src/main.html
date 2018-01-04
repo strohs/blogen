@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Blogen</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a href="main.html" class="navbar-brand">Blogen</a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarNav" class="collapse navbar-collapse">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">
+                        <i class="fa fa-user-times"></i>
+                        Login
+                    </a>
+                </li>
+
+                <!-- TODO remove this -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa fa-user-secret"></i>
+                        Admin
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- DASHBOARD HEADER -->
+<header id="main-header" class="py-2 bg-secondary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md text-md-center">
+                <h2><i class="fa fa-leaf"></i>Latest Blogens</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- POSTS -->
+<section id="posts" class="py-2">
+    <div class="container">
+        <div class="row">
+
+            <div class="media">
+                <img class="d-flex mr-3 align-self-start img-thumbnail" width="100" height="100" src="img/avatar1.jpg">
+                <div class="media-body">
+                    <h5>Post Title</h5>
+                    <h6>Category</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem deserunt dicta est fugiat ipsam minima nemo quod rerum voluptatem. Ab aspernatur distinctio ea ex exercitationem expedita fuga fugit illo in inventore labore laborum, nulla provident quam quo quod sequi temporibus voluptas, voluptates voluptatibus? Amet culpa ea laboriosam placeat possimus!</p>
+                </div>
+            </div>
+
+            <!-- NESTING MEDIA OBJECTS -->
+            <div class="media mt-3">
+                <img class="d-flex mr-3" src="img/avatar2.jpg">
+                <div class="media-body">
+                    <h5>Post Title</h5>
+                    <h6>Category</h6>
+                    Response Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque doloremque laborum neque nobis perferendis, ullam unde. Cupiditate et nam nulla praesentium sed sint voluptatibus.
+
+                    <div class="media mt-3">
+                        <a class="d-flex pr-3" href="#">
+                            <img src="img/avatar3.jpg" class="img-thumbnail" width="100" height="100">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="mt-0">Post Title</h5>
+                            <h6>Category</h6>
+                            Nested Response Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+
+                    <div class="media mt-3">
+                        <a class="d-flex pr-3" href="#">
+                            <img src="img/avatar4.jpg" class="img-thumbnail" width="100" height="100">
+                        </a>
+                        <div class="media-body">
+                            <h5 class="mt-0">Post Title</h5>
+                            <h6>Category</h6>
+                            Nested Nested Response Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="media mt-3">
+                <img class="d-flex mr-3 align-self-start img-thumbnail" width="100" height="100" src="img/avatar.png">
+                <div class="media-body">
+                    <h5>Post Title</h5>
+                    <h6>Category</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eos eveniet ex incidunt laboriosam suscipit.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="main-footer" class="bg-dark text-white mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="lead text-center">Copyright &copy; Blogen 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Using ckeditor for WYSIWYG editing in our textarea(s) -->
+<!--<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>-->
+<!--<script>-->
+<!--CKEDITOR.replace('editor1');-->
+<!--</script>-->
+</body>
+</html>

@@ -15,7 +15,7 @@
 <!-- really thin navbar with no padding: p-0 -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
     <div class="container">
-        <a href="index.html" class="navbar-brand">Blogen</a>
+        <a href="main.html" class="navbar-brand">Blogen</a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -76,17 +76,35 @@
     </div>
 </header>
 
-<!-- SEARCH POSTS -->
+<!-- SELECT CATEGORY / SEARCH POSTS -->
 <section id="search-posts" class="py-4 mb-4 bg-light">
     <div class="container">
-        <form id="searchPostsForm">
-            <div class="form-row">
-                <div class="form-inline ml-auto">
-                    <input type="text" class="form-control" placeholder="Search"/>
-                    <button type="submit" class="btn btn-primary">Search</button>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="category-posts.html">Business</a>
+                        <a class="dropdown-item" href="category-posts.html">Health & Wellness</a>
+                        <a class="dropdown-item" href="category-posts.html">Tech Gadgets</a>
+                        <a class="dropdown-item" href="category-posts.html">Web Development</a>
+                    </div>
                 </div>
             </div>
-        </form>
+            <div class="col-md-6">
+                <form id="searchPostsForm">
+                    <div class="form-row">
+                        <div class="form-inline ml-auto">
+                            <input type="text" class="form-control" placeholder="Search"/>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
     <!-- below is the original (non-form based) search input and button -->
     <!--<div class="container">-->
@@ -116,6 +134,7 @@
                         <thead class="thead-inverse">
                         <tr>
                             <th>#</th>
+                            <th>User</th>
                             <th>Title</th>
                             <th>Category</th>
                             <th>Date Posted</th>
@@ -126,10 +145,17 @@
                             <tr>
                                 <td scope="row">1</td>
                                 <td>
+                                    <div class="col">
+                                        <h6>YouKnowJohnDoe</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar.png" height="50" width="50">
+                                    </div>
+                                </td>
+                                <td>
                                     <a href="#" data-toggle="collapse" data-target="#post-text-1">
-                                        What is the best way to position block elements
+                                        What is the best way to position block elements...
                                     </a>
                                     <div class="collapse" id="post-text-1">
+
                                         <p>
                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eius
                                                 libero quisquam nobis explicabo vel non necessitatibus ipsum doloribus
@@ -142,55 +168,76 @@
                                 <td>Web Development</td>
                                 <td>July 12, 2017</td>
                                 <td>
-                                    <a href="details.html" class="btn btn-secondary">
-                                        <i class="fa fa-angle-double-right">Details</i>
-                                    </a>
+                                    <!--TODO maybe add functionality to edit a post -->
+                                    <!--<a href="details.html" class="btn btn-secondary">-->
+                                        <!--<i class="fa fa-angle-double-right">Details</i>-->
+                                    <!--</a>-->
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">2</td>
+                                <td>
+                                    <div class="col">
+                                        <h6>sheila</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar1.jpg" height="50" width="50">
+                                    </div>
+                                </td>
                                 <td>Has anyone used an Amazon Echo or the one with the screen</td>
                                 <td>Tech Gadgets</td>
                                 <td>July 13, 2017</td>
-                                <td><a href="details.html" class="btn btn-secondary">
-                                    <i class="fa fa-angle-double-right">Details</i>
-                                </a></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td scope="row">3</td>
+                                <td>
+                                    <div class="col">
+                                        <h6>guster</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar2.jpg" height="50" width="50">
+                                    </div>
+                                </td>
                                 <td>I need a web framework recommendation for building a product site</td>
                                 <td>Web Development</td>
                                 <td>July 14, 2017</td>
-                                <td><a href="details.html" class="btn btn-secondary">
-                                    <i class="fa fa-angle-double-right">Details</i>
-                                </a></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td scope="row">4</td>
+                                <td>
+                                    <div class="col">
+                                        <h6>tron33</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar3.jpg" height="50" width="50">
+                                    </div>
+                                </td>
                                 <td>What is the best way to form an LLC</td>
                                 <td>Business</td>
                                 <td>July 15, 2017</td>
-                                <td><a href="details.html" class="btn btn-secondary">
-                                    <i class="fa fa-angle-double-right">Details</i>
-                                </a></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td scope="row">5</td>
+                                <td>
+                                    <div class="col">
+                                        <h6>sassFan</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar4.jpg" height="50" width="50">
+                                    </div>
+                                </td>
                                 <td>Can anyone recommend an IDE for Python and Java development</td>
                                 <td>Web Development</td>
                                 <td>July 16, 2017</td>
-                                <td><a href="details.html" class="btn btn-secondary">
-                                    <i class="fa fa-angle-double-right">Details</i>
-                                </a></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td scope="row">6</td>
+                                <td>
+                                    <div class="col">
+                                        <h6>missMissy</h6>
+                                        <img class="img-fluid img-thumbnail" src="img/avatar.png" height="50" width="50">
+                                    </div>
+                                </td>
                                 <td>Whats the best diet to burn fat</td>
                                 <td>Heath & Wellness</td>
                                 <td>July 13, 2017</td>
-                                <td><a href="details.html" class="btn btn-secondary">
-                                    <i class="fa fa-angle-double-right">Details</i>
-                                </a></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
