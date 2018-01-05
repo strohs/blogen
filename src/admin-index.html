@@ -292,40 +292,40 @@
                 <button class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
 
-            <div class="modal-body">
-                <form id="addPostForm">
-                    <div class="form-group">
-                        <label for="post-title">Title</label>
-                        <input id="post-title" name="title" type="text" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="post-category">Category</label>
-                        <select id="post-category" name="category" class="form-control">
-                            <option value="">Web Development</option>
-                            <option value="">Tech Gadgets</option>
-                            <option value="">Business</option>
-                            <option value="">Health & Wellness</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="post-image">Image Link</label>
-                        <input id="post-image" name="image" type="url" class="form-control"/>
-                        <small class="form-text text-muted">Valid URL to an image</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="post-body">Body</label>
-                        <!-- uses ckeditor here -->
-                        <textarea id="post-body" name="body" rows="5" class="form-control"></textarea>
-                    </div>
-                </form>
-            </div>
+            <form id="addPostForm" action="admin-index.html">
+                <div class="modal-body">
 
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <!-- to submit to a form when the button is outside the <form>, not supported by edge/IE -->
-                <button class="btn btn-primary" data-dismiss="modal" type="submit" form="addPostForm">Save Changes
-                </button>
-            </div>
+                        <div class="form-group">
+                            <label for="addPostTitle">Title</label>
+                            <input id="addPostTitle" name="title" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="addPostCategory">Category</label>
+                            <select id="addPostCategory" name="category" class="form-control">
+                                <option value="Web Development">Web Development</option>
+                                <option value="Tech Gadgets">Tech Gadgets</option>
+                                <option value="Business">Business</option>
+                                <option value="Health & Wellness">Health & Wellness</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="addPostImage">Image Link</label>
+                            <input id="addPostImage" name="image" type="url" class="form-control"/>
+                            <small class="form-text text-muted">Valid URL to an image</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="postBody">Body</label>
+                            <!-- possibly use ckeditor here -->
+                            <textarea id="postBody" name="body" rows="5" class="form-control"></textarea>
+                        </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Save Changes"/>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -349,7 +349,7 @@
                     <!-- NOTE: Example of moving form buttons within the <form> tag rather than using modal-footer -->
                     <div class="form-row justify-content-end">
                         <button class="btn btn-secondary mx-2" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success mx-2" data-dismiss="modal">Save Changes</button>
+                        <input type="submit" class="btn btn-success" value="Save Changes"/>
                     </div>
                 </form>
             </div>
@@ -372,31 +372,36 @@
                 <button class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
 
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="user-name">Name</label>
-                        <input id="user-name" name="username" type="text" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="user-email">Email</label>
-                        <input id="user-email" name="email" type="email" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="user-password">Password</label>
-                        <input id="user-password" name="password" type="password" class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="user-password-confirm">Confirm Password</label>
-                        <input id="user-password-confirm" name="passwordConfirm" type="password" class="form-control"/>
-                    </div>
-                </form>
-            </div>
 
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
-            </div>
+                <div class="modal-body">
+                    <form id="addUserForm">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input id="firstName" name="first" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">First Name</label>
+                            <input id="lastName" name="last" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordConfirm">Confirm Password</label>
+                            <input id="passwordConfirm" name="passwordConfirm" type="password" class="form-control"/>
+                        </div>
+
+                        <div class="form-row justify-content-end">
+                            <button class="btn btn-secondary mx-2" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Save Changes"/>
+                        </div>
+                    </form>
+                </div>
         </div>
     </div>
 </div>
